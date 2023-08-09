@@ -7,7 +7,7 @@ export default function Users() {
     <div className="p-10">
       <button
         onClick={() => signOut()}
-        className="px-6 py-2.5 bg-black text-gray-50 rounded-md"
+        className="uppercase px-6 py-2.5 bg-black text-gray-50 rounded-md shadow-lg shadow-zinc-500"
       >
         logout
       </button>
