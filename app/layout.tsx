@@ -1,6 +1,8 @@
-import ToasterContext from "@/context/ToasterContext";
 import "../styles/globals.css";
 import type { Metadata } from "next";
+
+/* contexts */
+import ToasterContext from "@/context/ToasterContext";
 import AuthContext from "@/context/AuthContext";
 
 export const metadata: Metadata = {
@@ -15,7 +17,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className="font-poppins bg-gray-100 text-gray-600">
+      <body className="font-poppins bg-gray-50 text-gray-700">
         <AuthContext>
           <ToasterContext />
           {children}
