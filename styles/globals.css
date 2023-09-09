@@ -8,7 +8,7 @@ html,
 body,
 :root {
   height: 100%;
-  @apply selection:bg-violet-500 selection:text-gray-100;
+  @apply selection:bg-orange-500 selection:text-gray-100;
 }
 
 ::-webkit-scrollbar {

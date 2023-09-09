@@ -2,12 +2,21 @@
 
 import useRoutes from "@/hooks/useRoutes";
 import { useState } from "react";
-import DesktopNavItem from "@/components/sidebar/DesktopNavItem";
-import { signOut } from "next-auth/react";
+import { User } from "@prisma/client";
 
-export default function DesktopSidebar() {
+/* components */
+import DesktopNavItem from "@/components/sidebar/DesktopNavItem";
+import Avatar from "@/components/Avatar";
+
+type DesktopSidebarProps = {
+  currentUser: User;
+};
+
+export default function DesktopSidebar({ currentUser }: DesktopSidebarProps) {
   const routes = useRoutes();
   const [isOpen, setIsOpen] = useState(false);
+
+  console.log({ currentUser });
 
   return (
     <div
@@ -42,6 +51,26 @@ export default function DesktopSidebar() {
             />
           ))}
         </ul>
+      </nav>
+      <nav
+        className="
+        mt-4
+        flex
+        flex-col
+        justify-between
+        items-center
+      "
+      >
+        <div
+          onClick={() => setIsOpen(true)}
+          className="
+          cursor-pointer
+          hover:opacity-75
+          transition
+        "
+        >
+          <Avatar user={currentUser} />
+        </div>
       </nav>
     </div>
   );

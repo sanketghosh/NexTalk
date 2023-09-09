@@ -31,10 +31,10 @@ export default function Button({
         disabled && "opacity-50 cursor-default",
         fullWidth && "w-full",
         secondary ? "text-gray-700" : "text-gray-100",
-        danger && "bg-rose-600 focus-visible:outline-rose-700",
+        danger && "bg-orange-600 focus-visible:outline-orange-700",
         !secondary &&
           !danger &&
-          "bg-violet-500 hover:bg-violet-600 focus-visible:outline-violet-600"
+          "bg-orange-500 hover:bg-orange-600 focus-visible:outline-orange-600"
       )}
     >
       {children}

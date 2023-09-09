@@ -30,8 +30,9 @@ export default function DesktopNavItem({
       <Link
         href={href}
         className={clsx(
-          `group flex gap-x-3 rounded-md p-3 text-sm leading-6 font-semibold border bg-gray-50  hover:text-gray-50 hover:bg-violet-500`,
-          active && "text-gray-50 bg-violet-500"
+          `group flex gap-x-3 rounded-lg p-3 text-sm leading-6 font-semibold border border-gray-50 bg-gray-50  hover:text-gray-50 hover:bg-orange-500 shadow-md
+          `,
+          active && "text-gray-50 bg-orange-500"
         )}
       >
         <Icon className="h-6 w-6 shrink-0" aria-hidden="true" />
